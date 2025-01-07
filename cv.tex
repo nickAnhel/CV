@@ -1,0 +1,222 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{makecell}
+\usepackage[link=off]{phonenumbers}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{cmap}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage[margin=0.3in]{geometry}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.0in}
+\addtolength{\evensidemargin}{-0.0in}
+\addtolength{\textwidth}{0in}
+\addtolength{\topmargin}{20pt}
+\addtolength{\textheight}{0.0in}
+
+\urlstyle{same}
+
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!red,
+  linkbordercolor=red,
+  urlcolor=blue!70!black
+}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+  	\ifempty{#1}#2\else\textbf{#1}{: #2 \vspace{-2pt}}\fi
+  }
+}
+
+\usepackage[dvipsnames]{xcolor}
+\definecolor{mygray}{gray}{0}
+\usepackage{fancybox}
+
+\usepackage{lmodern}
+\usepackage{tikz}
+
+% Style definition
+\tikzset{rndblock/.style={rounded corners,rectangle,draw,outer sep=0pt}}
+
+% Command Definition
+\newcommand{\tframed}[2][]{\tikz[baseline=(h.base)]\node[rndblock,#1] (h) {\color{black}{#2}};}
+
+\newcommand*{\mystrut}{\rule[-0.2\baselineskip]{0pt}{0.8\baselineskip}}
+\newcommand{\skill}[1]{\tframed[lightgray]{\mystrut#1}}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textcolor{mygray}{#2} \\
+      \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeExpSubheading}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  & \textcolor{mygray}{#2} \\
+      \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
+      {\scriptsize#5}
+    \end{tabular*}\vspace{4pt}
+}
+
+\newcommand{\resumeProjSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  & \textcolor{mygray}{#2} \\
+      \scriptsize {#3} & \textcolor{mygray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{4pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{changepage}
+\newcommand{\resumeDesc}[1]{\begin{adjustwidth}{5pt}{0pt}\vspace{-2pt}{\small{#1}}\end{adjustwidth}}
+
+\begin{document}
+
+%------------HEADING--------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Никита Анхимов} & Email : \href{mailto:anhimovn1@gmail.com}{anhimovn1@gmail.com}\\
+  GitHub: \href{https://github.com/nickAnhel}{nickAnhel} & Telegram : \href{https://t.me/nickAnhel}{nickAnhel} \\
+\end{tabular*}
+
+
+%-----------ABOUT-----------------
+\section{О себе}
+ \resumeSubHeadingListStart
+   \item{
+     {Начинающий Python-разработчик.  Больше всего заинтересован в создании Web-приложении с использованием фреймворка FastAPI. Также имею небольшой опыт создания Telegram-ботов с помощью библиотеки Aiogram и написания фронтенда на ReactJS.}
+   }
+ \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION--------------
+\section{Образование}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+       {Прикладная информатика, СПбГУАП}{Санкт-Петербург, Россия}
+      {Неоконченный бакалавриат. Институт информационных технологий и программирования}{Сентябрь 2022 - наст. время}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-------------
+\section{Опыт работы}
+  \resumeSubHeadingListStart
+      \resumeExpSubheading
+      {\href{https://algoritmika.org/ru}{Алгоритмика}}{Санкт-Петербург, Россия}
+      {Преподаватель}{Декабрь 2022 - Май 2024}
+      {\skill{Python} \skill{C#} \skill{JS} \skill{HTML} \skill{CSS}}
+      \resumeDesc{
+      \begin{itemize}
+          \item Занимался обучением детей и подростков от 6 до 17 лет по таким курсам, как «Программирование на Python», «Фронтенд Разработка», «Разработка игр на Unity», «Математика» и другие. 
+          \item Проводил открытые уроки и мастер-классы, направленные на привлечение клиентов и популяризацию программирования среди детей и подростков.
+      \end{itemize}}
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS--------------
+\section{Проекты}
+  \resumeSubHeadingListStart
+  
+    \resumeProjSubheading
+      {\href{https://github.com/nickAnhel/FastAPI-Video-Hosting}{Video Hosting} }{}
+      {\skill{Python} \skill{FastAPI} \skill{Celery} \skill{PostgreSQL} \skill{RabbitMQ} \skill{S3} \skill{Docker} \skill{JWT}}{}
+          \resumeDesc{
+          Разработал бэкенд платформы, где пользователи могут публиковать, просматривать и оценивать видео, писать комментарии и создавать плейлисты. Для создания REST API используется фреймворк FastAPI в связке с Pydantic для валидации данных и SQLAlchemy для обращения к БД. Для хранения медиа-файлов (фото профиля, видео, превью) подключено объектное хранилище Selectel S3. Для аутентификации и авторизации пользователей применяется технология JWT.
+          
+          Также в проекте реализована система отправки уведомлений, которая позволяет пользователям узнавать о выходе новых видео на самой странице видео-хостинга, через электронную почту или Telegram. Эта система вынесена в качестве отдельного сервиса, взаимодействие с которым осуществляется за счет публикации основным бэкендом приложения задач в очередь RabbitMQ. Внутри самого сервиса задачи попадают в Celery, который уже занимается отправкой уведомлений. 
+        
+          Также я отвечал за деплой приложения на домашнем сервере под управлением EndeavourOS. Для запуска проекта использовался Docker и Docker Compose. Из-за невозможности получения статического IP для сервера был арендован VPS, с которым (с помощью autossh) было реализовано туннельное соединение с пробросом портов для бэкенда и фронтенда приложения.
+          }
+  
+    \resumeProjSubheading
+      {\href{https://github.com/nickAnhel/FastAPI-Atom-Chat}{Atom Chat}}{}
+      {\skill{Python} \skill{FastAPI} \skill{ReactJS} \skill{SocketIO} \skill{Websockets} \skill{PostgreSQL} \skill{JWT}}{}
+        \resumeDesc{
+            Разработал мессенджер, где пользователи могут общаться в приватных и публичных чатах, создавать сообщества и управлять историей сообщений.
+
+            Бэкенд приложения реализован с помощью асинхронного фреймворка FastAPI, для валидации данных используется Pydantic, обращение к БД осуществляется с помощью SQLAlchemy и ее Core синтаксиса. Для управления Websocket-соединениями используется мультиплатформенная библиотека SocketIO. Для аутентификации и авторизации пользователей используется технология JWT. Пакет, отвечающий за операции с аккаунтами пользователей, покрыт тестами, для чего применяется фреймворк PyTest.
+            
+            Фронтенд приложения реализован с помощью библиотеки ReactJS, а для управления Websocket-соединениями применяется библиотека SocketIO.
+        }
+  \resumeSubHeadingListEnd
+
+
+%--------ADDITIONAL INFO----------
+\section{Дополнительная информация}
+ \resumeSubHeadingListStart
+   \item{
+     { Имею небольшой опыт написания проектов на C++, преимущественно консольных приложений. }
+   }\vspace{-7pt}
+   \item{
+     { С июня 2024 года перешел на Linux и с тех пор расширяю свои познания об этом семействе операционных систем. Использую Fedora как основную ОС на ноутбуке и Arch на домашнем сервере. }
+   }\vspace{-7pt}
+   \item{
+     { В университете изучаю Data Science и ML с использованием библиотек pandas, scikit-learn и numpy, а также внутреннее устройство компьютерных систем и сетей. }
+   }
+ \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS---------
+\section{Навыки}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Языки программирования}{: Python, JavaScript }
+   }\vspace{-7pt}
+   \item{
+     \textbf{Фреймворки и библиотеки}{: FastAPI, SQLAlchemy, Pydantic }
+   }
+   \vspace{-7pt}
+   \item{
+     \textbf{Технологии}{: PostgreSQL, Git, Docker  }
+   }
+   \vspace{-7pt}
+   \item{
+     \textbf{Операционные системы}{: Windows, Linux (Fedora, Arch, Ubuntu) }
+   }
+ \resumeSubHeadingListEnd
+
+
+\end{document}
